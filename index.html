@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigy Tech & Digital Services | Empowering Digital Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(30, 64, 175, 0.9) 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link:hover {
+            color: var(--accent);
+        }
+        
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        .tech-icon {
+            color: var(--primary);
+            font-size: 2.5rem;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background: var(--primary);
+            bottom: -8px;
+            left: 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+                        PT
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">Prodigy Tech</span>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-800 hover:text-blue-600 font-medium">Home</a>
+                    <a href="#services" class="nav-link text-gray-800 hover:text-blue-600 font-medium">Services</a>
+                    <a href="#about" class="nav-link text-gray-800 hover:text-blue-600 font-medium">About Us</a>
+                    <a href="#portfolio" class="nav-link text-gray-800 hover:text-blue-600 font-medium">Portfolio</a>
+                    <a href="#contact" class="nav-link text-gray-800 hover:text-blue-600 font-medium">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-gray-800 hover:text-blue-600">Home</a>
+                <a href="#services" class="block py-2 text-gray-800 hover:text-blue-600">Services</a>
+                <a href="#about" class="block py-2 text-gray-800 hover:text-blue-600">About Us</a>
+                <a href="#portfolio" class="block py-2 text-gray-800 hover:text-blue-600">Portfolio</a>
+                <a href="#contact" class="block py-2 text-gray-800 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Empowering Your <span class="text-yellow-300">Digital Growth</span></h1>
+                <p class="text-xl mb-8">From website design to digital marketing, publishing, and brand management — we help you grow your business and presence online.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="btn-primary text-white font-bold py-3 px-8 rounded-lg text-center">Get Started</a>
+                    <a href="#services" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg text-center">Our Services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Digital Solutions" class="rounded-lg shadow-2xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title">Why Choose Prodigy Tech</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                    <i class="fas fa-lightbulb tech-icon mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Innovation</h3>
+                    <p class="text-gray-600">We stay ahead of digital trends to provide cutting-edge solutions that give your business a competitive edge.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                    <i class="fas fa-medal tech-icon mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Excellence</h3>
+                    <p class="text-gray-600">Our commitment to quality ensures that every project meets the highest standards of performance and design.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                    <i class="fas fa-headset tech-icon mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Reliability</h3>
+                    <p class="text-gray-600">We deliver on time, every time, with dedicated support to ensure your digital assets perform optimally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title">Our Digital Solutions</h2>
+            
+            <!-- Web & App Solutions -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <i class="fas fa-globe text-3xl text-blue-600 mr-4"></i>
+                    <h3 class="text-2xl font-bold">Web & App Solutions</h3>
+                </div>
+                <p class="text-gray-600 mb-8">We create responsive, high-performance websites and applications that drive engagement and conversions. Our solutions are tailored to meet your specific business needs with seamless user experiences.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-laptop-code text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">Website Design</h4>
+                        <p class="text-gray-600">Custom, responsive websites for corporate, eCommerce, portfolio, NGO, and personal use with SEO optimization.</p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-mobile-alt text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">App Development</h4>
+                        <p class="text-gray-600">Web and mobile applications tailored to your business requirements with intuitive interfaces.</p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-server text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">Hosting & Management</h4>
+                        <p class="text-gray-600">Reliable hosting, domain registration, business email setup, and ongoing website maintenance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Digital Marketing -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <i class="fas fa-bullhorn text-3xl text-blue-600 mr-4"></i>
+                    <h3 class="text-2xl font-bold">Digital Marketing & Branding</h3>
+                </div>
+                <p class="text-gray-600 mb-8">Amplify your online presence with strategic digital marketing campaigns that target the right audience and deliver measurable results.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-hashtag text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">Social Media Management</h4>
+                        <p class="text-gray-600">Full-service account creation, content strategy, and management for all major platforms.</p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-ad text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">Paid Advertising</h4>
+                        <p class="text-gray-600">Targeted campaigns on Google Ads, Meta Ads, and other platforms to drive conversions.</p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-chart-line text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">Analytics & Tracking</h4>
+                        <p class="text-gray-600">Comprehensive performance tracking and optimization for all your digital campaigns.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Publishing & Creative -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <i class="fas fa-book-open text-3xl text-blue-600 mr-4"></i>
+                    <h3 class="text-2xl font-bold">Publishing & Creative Services</h3>
+                </div>
+                <p class="text-gray-600 mb-8">Transform your ideas into professionally published works and compelling visual content that captures attention and communicates your message effectively.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-book text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">Book Publishing</h4>
+                        <p class="text-gray-600">End-to-end publishing services including editing, formatting, cover design, and distribution on Amazon KDP and IngramSpark.</p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-pen-fancy text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">Copywriting</h4>
+                        <p class="text-gray-600">Engaging web content, blog posts, business bios, and marketing materials that convert.</p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-photo-video text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">Visual Content</h4>
+                        <p class="text-gray-600">Professional graphic design, branding materials, product videos, and corporate presentations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Business Digital Setup -->
+            <div>
+                <div class="flex items-center mb-8">
+                    <i class="fas fa-cogs text-3xl text-blue-600 mr-4"></i>
+                    <h3 class="text-2xl font-bold">Business Digital Setup</h3>
+                </div>
+                <p class="text-gray-600 mb-8">Essential digital infrastructure services to establish and optimize your online business presence for maximum visibility and efficiency.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-envelope text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">Domain & Email Setup</h4>
+                        <p class="text-gray-600">Professional domain registration and business email configuration for brand credibility.</p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-map-marker-alt text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">Google Business Profile</h4>
+                        <p class="text-gray-600">Optimized local business listing to improve visibility in Google search and maps.</p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <i class="fas fa-robot text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="text-xl font-bold mb-3">CRM & Automation</h4>
+                        <p class="text-gray-600">HubSpot, Zoho CRM setup and business automation solutions to streamline operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6 section-title">About Prodigy Tech</h2>
+                    <p class="text-gray-600 mb-6">Prodigy Tech & Digital Services is a forward-thinking technology and digital solutions company based in Lagos, Nigeria. We specialize in helping individuals, startups, and businesses build a strong digital footprint through professional web design, mobile app development, digital marketing, content creation, and publishing solutions.</p>
+                    <p class="text-gray-600 mb-6">Our goal is simple — to empower brands and entrepreneurs to grow, engage, and succeed in the digital era.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-3 text-blue-600">Our Mission</h3>
+                        <p class="text-gray-600">To empower individuals and businesses with innovative, affordable, and result-driven digital solutions that transform ideas into lasting impact.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-3 text-blue-600">Our Vision</h3>
+                        <p class="text-gray-600">To become a leading African brand in digital technology and creative innovation — bridging businesses with opportunities across the world through powerful digital presence.</p>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Our Team" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+            
+            <!-- Core Values -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center mb-8">Our Core Values</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div class="bg-blue-50 p-6 rounded-lg text-center">
+                        <i class="fas fa-lightbulb text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="font-bold mb-2">Innovation</h4>
+                        <p class="text-sm text-gray-600">We think ahead to deliver modern, scalable solutions.</p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg text-center">
+                        <i class="fas fa-star text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="font-bold mb-2">Excellence</h4>
+                        <p class="text-sm text-gray-600">We maintain the highest quality in all we deliver.</p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg text-center">
+                        <i class="fas fa-handshake text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="font-bold mb-2">Integrity</h4>
+                        <p class="text-sm text-gray-600">We operate with transparency and professionalism.</p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg text-center">
+                        <i class="fas fa-trophy text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="font-bold mb-2">Customer Success</h4>
+                        <p class="text-sm text-gray-600">We grow only when our clients succeed.</p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg text-center">
+                        <i class="fas fa-users text-blue-600 text-2xl mb-4"></i>
+                        <h4 class="font-bold mb-2">Collaboration</h4>
+                        <p class="text-sm text-gray-600">We partner with clients to achieve shared goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title">Our Work</h2>
+            
+            <!-- Portfolio Filter -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button class="px-4 py-2 text-sm font-medium rounded-l-lg bg-blue-600 text-white focus:outline-none">
+                        All
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-50 focus:outline-none">
+                        Websites
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-50 focus:outline-none">
+                        Apps
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-50 focus:outline-none">
+                        Marketing
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium rounded-r-lg bg-white text-gray-700 hover:bg-gray-50 focus:outline-none">
+                        Publishing
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Portfolio Items -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="E-commerce Website" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Website</h3>
+                        <p class="text-gray-600 mb-4">A complete online store with product catalog, cart, and secure checkout system.</p>
+                        <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Web Development</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mobile App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Fitness Mobile App</h3>
+                        <p class="text-gray-600 mb-4">A cross-platform fitness tracking application with workout plans and progress analytics.</p>
+                        <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">App Development</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Digital Marketing" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Digital Marketing Campaign</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive digital marketing strategy that increased client leads by 300%.</p>
+                        <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Digital Marketing</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Book Cover" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Published Book</h3>
+                        <p class="text-gray-600 mb-4">Professional book cover design and publishing on Amazon KDP and IngramSpark.</p>
+                        <span class="inline-block bg-blue-100 text-blue-600 px-3 py-
+</html>
