@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 Welcome!
 In this repo you are going to find some scripts that you can use for bash and python configurations for any environment of choice.
+=======
+Please stay back
+And enjoy!
+>>>>>>> scripts
